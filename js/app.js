@@ -1,38 +1,156 @@
-document.getElementById("btn").onclick = function() {
-    
-    var time = prompt("Please enter your time...");
+var $taskCpu = document.getElementById("taskCpu");
+var $taskUser = document.getElementById("taskUser");
+var $countCpu = document.getElementById("countCpu");
+var $countUser = document.getElementById("countUser");
+var $winerLost = document.getElementById("winerLost");
 
-    document.getElementById("btn").innerText = "ReEnter Time";
+var taskCpu = "";
+var taskUser = "";
+var winerLost = "";
+var countCpu = 0;
+var countUser = 0;
 
-    var taskId = document.getElementById("task");
+var $sang = 0;
+var $kaghaz = 1;
+var $gheychi = 2;
 
-    task = "";
-
-    if(time > 24 || time < 1 ){
-        task = "Please enter a time between 1 and 24";
-    } else if(time < 8 || time == null || time > 22){
-        task = "You should be sleeping";
-    } else if(time < 10){
-        task = "Wake up";
-    } else if(time < 12){
-        task = "Go to work";
-    } else if(time < 13){
-        task = "Lunch";
-    } else if(time < 17){
-        task = "Go to work";
-    } else if(time < 19){
-        task = "Gym";
-    } else if(time < 20){
-        task = "Dinner Time";
-    } else if(time < 22){
-        task = "Watch TV";
-    } else if(time = 22){
-        task = "Time to go to sleeeeep";
-    }
-
-    taskId.innerText = task;
-
+document.getElementById("sang").onclick = function() {
+var rand = Math.floor(Math.random() * 3);    
+if(countCpu == 0 && countUser == 0){
+    $winerLost.innerHTML = "بازی کن";
 }
+switch(rand){
+    case $sang:
+        taskCpu = "کامپیوتر : " + "<i class='las la-fist-raised la-3x'></i>";
+        taskUser = "<i class='las la-fist-raised la-3x'></i>" + " : شما";
+        // winerLost = "مساوی";
+    break;
+    case $kaghaz:
+        taskCpu = "کامپیوتر : " + "<i class='las la-hand-paper la-3x'></i>";
+        taskUser = "<i class='las la-fist-raised la-3x'></i>" + " : شما";
+        countCpu += 1;
+        // winerLost = "باختی";
+    break;
+    case $gheychi:
+        taskCpu = "کامپیوتر : " + "<i class='las la-hand-peace la-3x'></i>";
+        taskUser = "<i class='las la-fist-raised la-3x'></i>" + " : شما";
+        countUser += 1;
+        // winerLost = "بردی";
+    break;
+}
+
+$taskCpu.innerHTML = taskCpu;
+$countCpu.innerHTML = countCpu;
+$taskUser.innerHTML = taskUser;
+$countUser.innerHTML = countUser;
+// $winerLost.innerHTML =winerLost;
+switch(5){
+    case countCpu:
+        $winerLost.innerHTML = "<div class='alert alert-danger' role='alert'>متاسفانه شما بازنده شدید!  <i class='las la-frown'></i></div>";
+        countCpu = 0;
+        countUser = 0;
+    break;
+    case countUser:
+        $winerLost.innerHTML = "<div class='alert alert-success' role='alert'>شما برنده شدید  <i class='las la-grin'></i></div>";
+        countCpu = 0;
+        countUser = 0;
+    break;
+}
+
+};
+
+document.getElementById("kaghaz").onclick = function() {
+var rand = Math.floor(Math.random() * 3);    
+if(countCpu == 0 && countUser == 0){
+    $winerLost.innerHTML = "بازی کن";
+}
+    
+switch(rand){
+    case $sang:
+        taskCpu = "کامپیوتر : " + "<i class='las la-fist-raised la-3x'></i>";
+        taskUser = "<i class='las la-hand-paper la-3x'></i>" + " : شما";
+        // winerLost = "بردی";
+        countUser += 1;
+    break;
+    case $kaghaz:
+        taskCpu = "کامپیوتر : " + "<i class='las la-hand-paper la-3x'></i>";
+        taskUser = "<i class='las la-hand-paper la-3x'></i>" + " : شما";
+        // winerLost = "مساوی";
+    break;
+    case $gheychi:
+        taskCpu = "کامپیوتر : " + "<i class='las la-hand-peace la-3x'></i>";
+        countCpu += 1;
+        taskUser = "<i class='las la-hand-paper la-3x'></i>" + " : شما";
+        // winerLost = "باختی";
+    break;
+}
+    
+$taskCpu.innerHTML = taskCpu;
+$countCpu.innerHTML = countCpu;
+$taskUser.innerHTML = taskUser;
+$countUser.innerHTML = countUser;
+// $winerLost.innerHTML =winerLost;
+switch(5){
+    case countCpu:
+        $winerLost.innerHTML = "<div class='alert alert-danger' role='alert'>متاسفانه شما بازنده شدید!  <i class='las la-frown'></i></div>";
+        countCpu = 0;
+        countUser = 0;
+    break;
+    case countUser:
+        $winerLost.innerHTML = "<div class='alert alert-success' role='alert'>شما برنده شدید  <i class='las la-grin'></i></div>";
+        countCpu = 0;
+        countUser = 0;
+    break;
+}
+};
+
+document.getElementById("gheychi").onclick = function() {
+var rand = Math.floor(Math.random() * 3);    
+if(countCpu == 0 && countUser == 0){
+    $winerLost.innerHTML = "بازی کن";
+}
+  
+switch(rand){
+        case $sang:
+        taskCpu = "کامپیوتر : " + "<i class='las la-fist-raised la-3x'></i>";
+        countCpu += 1;
+        taskUser = "<i class='las la-hand-peace la-3x'></i>" + " : شما";
+        // winerLost = "باختی";
+    break;
+    case $kaghaz:
+        taskCpu = "کامپیوتر : " + "<i class='las la-hand-paper la-3x'></i>";
+        taskUser = "<i class='las la-hand-peace la-3x'></i>" + " : شما";
+        // winerLost = "بردی";
+        countUser += 1;
+    break;
+    case $gheychi:
+        taskCpu = "کامپیوتر : " + "<i class='las la-hand-peace la-3x'></i>";
+        taskUser = "<i class='las la-hand-peace la-3x'></i>" + " : شما";
+        // winerLost = "مساوی";
+    break;
+}
+        
+$taskCpu.innerHTML = taskCpu;
+$countCpu.innerHTML = countCpu;
+$taskUser.innerHTML = taskUser;
+$countUser.innerHTML = countUser;
+// $winerLost.innerHTML =winerLost;
+switch(5){
+    case countCpu:
+        $winerLost.innerHTML = "<div class='alert alert-danger' role='alert'>متاسفانه شما بازنده شدید!  <i class='las la-frown'></i></div>";
+        countCpu = 0;
+        countUser = 0;
+    break;
+    case countUser:
+        $winerLost.innerHTML = "<div class='alert alert-success' role='alert'>شما برنده شدید  <i class='las la-grin'></i></div>";
+        countCpu = 0;
+        countUser = 0;
+    break;
+}
+};
+
+
+
 
 
 
