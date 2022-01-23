@@ -7,34 +7,33 @@
     <link rel="stylesheet" href="./line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="./css/vendor/bootstrap.css">
     <link rel="stylesheet" href="./css/main.css">
-    <title>homework 05 - بازی سنگ کاغذ قیچی</title>
+    <title>homework 05 - ماشین حساب</title>
 </head>
 <body>
     
     <div class="container-fluid bg-warning">
-        <div class="row">
-            <div class="col-12 d-flex flex-column justify-content-center align-items-center vh-100">
-                <div class="alert alert-primary mb-5" role="alert">
-                    به بازی سنگ کاغذ قیچی خوش آمدید! هرکی به عدد 5 برسه برنده میشه.
-                  </div>
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="text-center">
-                        <h1 class="h3" id="taskCpu">کامپیوتر</h1>
-                        <p class="h1" id="countCpu">0</p>
-                    </div>
-                    <h1 class="h3 px-5">-</h1>
-                    <div class="text-center">
-                        <h1 class="h3" id="taskUser">شما</h1>
-                        <p class="h1" id="countUser">0</p>
-                    </div>
+        <div class="row vh-100">
+            <div class="col-4"></div>
+            <div class="col-4 d-flex flex-column justify-content-center">
+                <div class="alert alert-dark mb-5">
+                    <p class="text-right">ماشین حساب</p>
                 </div>
-                <h3 class="h2" id="winerLost">بازی کن</h3>
-                <div>
-                    <button class="btn bg-transparent mt-5 text-center" id="sang"><i class="las la-fist-raised la-8x"></i><h3>سنگ</h3></button>
-                    <button class="btn bg-transparent mt-5" id="kaghaz"><i class="las la-hand-paper la-8x"></i><h3>کاغذ</h3></button>
-                    <button class="btn bg-transparent mt-5" id="gheychi"><i class="las la-hand-peace la-8x"></i><h3>قیچی</h3></button>
+                <input type="number" id="numberOne" class="form-control mb-3" required value="0">
+                <input type="number" id="numberTwo" class="form-control mb-3" required value="0">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <button type="submit" class="btn btn-dark" id="plus">+</button>
+                        <button type="submit" class="btn btn-dark" id="minus">-</button>
+                        <button type="submit" class="btn btn-dark" id="division">/</button>
+                        <button type="submit" class="btn btn-dark" id="multiply">*</button>
+                        <button type="submit" class="btn btn-dark" id="clear">پاک کردن</button>
+                    </div>
+                    <div>
+                        جواب :<span id="result">0</span>
+                    </div>
                 </div>
             </div>
+            <div class="col-4"></div>
         </div>
     </div>
     <script src="./js/vendor/jquery.min.js"></script>
