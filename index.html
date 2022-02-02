@@ -7,32 +7,35 @@
     <link rel="stylesheet" href="./line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="./css/vendor/bootstrap.css">
     <link rel="stylesheet" href="./css/main.css">
-    <title>homework 04 - بازی سنگ کاغذ قیچی</title>
+    <title>homework 06 - بازی پاسور</title>
 </head>
 <body>
     
-    <div class="container-fluid bg-warning">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 d-flex flex-column justify-content-center align-items-center vh-100">
-                <div class="alert alert-primary mb-5" role="alert">
-                    به بازی سنگ کاغذ قیچی خوش آمدید! هرکی به عدد 5 برسه برنده میشه.
-                  </div>
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="text-center">
-                        <h1 class="h3" id="taskCpu">کامپیوتر</h1>
-                        <p class="h1" id="countCpu">0</p>
-                    </div>
-                    <h1 class="h3 px-5">-</h1>
-                    <div class="text-center">
-                        <h1 class="h3" id="taskUser">شما</h1>
-                        <p class="h1" id="countUser">0</p>
-                    </div>
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                <div class="alert alert-primary my-2" role="alert">
+                    لطفا تعداد بازیکن را انتخاب کن تا به هر نفر 2 کارت بازی داده بشه.
                 </div>
-                <h3 class="h2" id="winerLost">بازی کن</h3>
-                <div>
-                    <button class="btn bg-transparent mt-5 text-center" id="sang"><i class="las la-fist-raised la-8x"></i><h3>سنگ</h3></button>
-                    <button class="btn bg-transparent mt-5" id="kaghaz"><i class="las la-hand-paper la-8x"></i><h3>کاغذ</h3></button>
-                    <button class="btn bg-transparent mt-5" id="gheychi"><i class="las la-hand-peace la-8x"></i><h3>قیچی</h3></button>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p id="playerNum3"></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p id="playerNum1"></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p id="playerNum2"></p>
+                    </div>
+                    <div class="col-sm-12">
+                        <p id="playerNum4"></p>
+                    </div>
+                    <div class="col-12 text-center my-2">
+                        <button class="btn bg-transparent mt-5 text-center" id="twoPlayer"><i class="las la-user-circle la-4x"></i><h3>2 بازیکن</h3></button>
+                        <button class="btn bg-transparent mt-5" id="threePlayer"><i class="las la-user-circle la-4x"></i><h3>3 بازیکن</h3></button>
+                        <button class="btn bg-transparent mt-5" id="fourPlayer"><i class="las la-user-circle la-4x"></i><h3>4 بازیکن</h3></button>
+                    </div>
                 </div>
             </div>
         </div>

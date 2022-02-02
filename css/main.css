@@ -5,4 +5,9 @@
 body{
     direction: rtl;
     font-family: yekan;
+    background: #ffc107 ;
+}
+
+.w-120-px{
+    width: 120px;
 }
